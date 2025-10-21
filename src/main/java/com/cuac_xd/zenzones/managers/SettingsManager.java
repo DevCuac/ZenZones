@@ -30,24 +30,10 @@ public class SettingsManager {
         loadConfigAndLang();
     }
 
-    // --- SECCIÓN CORREGIDA ---
-
-    /**
-     * Obtiene un mensaje del lang.yml y le añade el prefijo por defecto.
-     * @param path La ruta del mensaje en el archivo lang.yml.
-     * @return El mensaje formateado con prefijo.
-     */
     public String getMessage(String path) {
-        // Llama a la versión más completa del método, siempre con prefijo.
         return getMessage(path, true);
     }
 
-    /**
-     * Obtiene un mensaje del lang.yml, con la opción de incluir o no el prefijo.
-     * @param path La ruta del mensaje en el archivo lang.yml.
-     * @param withPrefix Si es true, se añadirá el prefijo definido en lang.yml.
-     * @return El mensaje formateado.
-     */
     public String getMessage(String path, boolean withPrefix) {
         String message = langConfig.getString(path, "&cMensaje no encontrado: " + path);
 
@@ -58,8 +44,6 @@ public class SettingsManager {
 
         return ChatColor.translateAlternateColorCodes('&', message);
     }
-
-    // --- FIN DE LA SECCIÓN CORREGIDA ---
 
     public boolean isWelcomeFarewellEnabled() {
         return plugin.getConfig().getBoolean("show-welcome-farewell-messages", true);
