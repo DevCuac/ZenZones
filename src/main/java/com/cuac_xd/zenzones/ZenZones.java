@@ -43,12 +43,10 @@ public class ZenZones extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ProtectionListener(this), this);
         getServer().getPluginManager().registerEvents(new MobSpawningListener(this), this);
 
-        // --- CAMBIO IMPORTANTE: REGISTRAR EL EXECUTOR Y EL TABCOMPLETER ---
         ZoneCommand zoneCommand = new ZoneCommand(this);
         PluginCommand command = getCommand("zenzones");
         command.setExecutor(zoneCommand);
         command.setTabCompleter(zoneCommand);
-        // -----------------------------------------------------------------
 
         getLogger().info("ZenZones ha sido activado correctamente.");
     }
