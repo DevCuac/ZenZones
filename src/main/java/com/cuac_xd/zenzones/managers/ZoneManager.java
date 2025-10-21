@@ -55,7 +55,6 @@ public class ZoneManager {
                     zonesConfig.getDouble(path + ".max.x"), zonesConfig.getDouble(path + ".max.y"), zonesConfig.getDouble(path + ".max.z")
             );
 
-            // Cargar flags
             if (zonesConfig.isConfigurationSection(path + ".flags")) {
                 for (String flag : zonesConfig.getConfigurationSection(path + ".flags").getKeys(false)) {
                     zone.setFlag(flag, zonesConfig.getBoolean(path + ".flags." + flag));
@@ -79,7 +78,6 @@ public class ZoneManager {
             zonesConfig.set(path + ".max.y", zone.getMaxY());
             zonesConfig.set(path + ".max.z", zone.getMaxZ());
 
-            // Guardar flags
             for (String flag : zone.getFlags().keySet()) {
                 zonesConfig.set(path + ".flags." + flag, zone.getFlag(flag));
             }
