@@ -19,7 +19,6 @@ public class ProtectedZone {
         this.minX = Math.min(x1, x2); this.minY = Math.min(y1, y2); this.minZ = Math.min(z1, z2);
         this.maxX = Math.max(x1, x2); this.maxY = Math.max(y1, y2); this.maxZ = Math.max(z1, z2);
 
-        // Valores por defecto para las flags (true = DENY, false = ALLOW)
         flags.put("pvp", true);
         flags.put("build", true);
         flags.put("mob-spawning", true);
@@ -36,7 +35,6 @@ public class ProtectedZone {
                 loc.getZ() >= minZ && loc.getZ() <= maxZ;
     }
 
-    // Getters
     public String getName() { return name; }
     public String getWorldName() { return worldName; }
     public UUID getOwner() { return owner; }
@@ -47,7 +45,6 @@ public class ProtectedZone {
     public double getMaxY() { return maxY; }
     public double getMaxZ() { return maxZ; }
 
-    // Flag management
     public boolean getFlag(String flagName) {
         return flags.getOrDefault(flagName.toLowerCase(), false);
     }
