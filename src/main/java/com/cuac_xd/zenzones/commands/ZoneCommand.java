@@ -122,7 +122,6 @@ public class ZoneCommand implements CommandExecutor, TabCompleter {
         String zoneName = args[1].toLowerCase();
 
         if (zoneManager.getZoneByName(zoneName) != null) {
-            // Opcional: Añadir mensaje de que la zona ya existe
             return;
         }
 
