@@ -1,0 +1,12 @@
+# ZenZones - Configuración Principal
+
+# Activa o desactiva los mensajes de bienvenida y despedida al entrar/salir de zonas.
+# Si está en 'false', no se mostrará ningún mensaje de entrada/salida.
+show-welcome-farewell-messages: true
+
+# Tipo de mensaje para la bienvenida/despedida.
+# Opciones disponibles:
+#   CHAT: Envía un mensaje normal en el chat.
+#   TITLE: Muestra un título grande en el centro de la pantalla.
+#   ACTION_BAR: Muestra un texto sobre la barra de inventario.
+message-type: TITLE

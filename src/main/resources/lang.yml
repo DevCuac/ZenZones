@@ -1,0 +1,67 @@
+# ZenZones - Archivo de Mensajes
+# Usa & para códigos de color. Placeholders: {zone}, {player}, {flag}, {value}, {permission}
+
+prefix: "&8[&bZenZones&8] &r"
+
+# Mensajes Generales
+no-permission: "&cNo tienes permiso para hacer eso."
+no-permission-command: "&cNo tienes permiso para usar este comando."
+player-only-command: "&cEste comando solo puede ser usado por un jugador."
+zone-not-found: "&cLa zona '&e{zone}&c' no fue encontrada."
+reload-success: "&aLa configuración y las zonas han sido recargadas."
+
+# Comandos de Zonas
+zone-created: "&aZona '&e{zone}&a' creada correctamente."
+zone-deleted: "&aZona '&e{zone}&a' eliminada correctamente."
+zone-list-header: "&b--- Zonas Protegidas ---"
+zone-list-item: "&7- &e{zone}"
+no-zones-defined: "&cNo hay zonas definidas todavía."
+
+# Creación de Zonas
+no-selection: "&c¡Debes hacer una selección con el hacha de WorldEdit primero!"
+usage-create: "&c_Uso: /zz create <nombre>"
+usage-delete: "&c_Uso: /zz delete <nombre>"
+
+# Mensajes de Entrada/Salida
+entry-denied: "&cNo tienes permiso para entrar a &e{zone}&c."
+welcome-message: "&aBienvenido a &e{zone}&a."
+farewell-message: "&cHas salido de &e{zone}&c."
+
+# Flags
+flag-updated: "&aLa flag '&e{flag}&a' de la zona '&e{zone}&a' ha sido establecida a '&e{value}&a'."
+invalid-flag: "&cLa flag '&e{flag}&c' no es válida. Flags disponibles: pvp, build, mob-spawning, item-drop, use."
+usage-flag: "&c_Uso: /zz flag <zona> <flag> <allow|deny>"
+
+# Whitelist/Blacklist
+player-added-allow: "&aEl jugador &e{player}&a ha sido añadido a la lista de permitidos de la zona &e{zone}&a."
+player-added-deny: "&aEl jugador &e{player}&a ha sido añadido a la lista de denegados de la zona &e{zone}&a."
+player-removed-allow: "&aEl jugador &e{player}&a ha sido eliminado de la lista de permitidos."
+player-removed-deny: "&aEl jugador &e{player}&a ha sido eliminado de la lista de denegados."
+usage-allow: "&c_Uso: /zz allow <zona> <jugador>"
+usage-deny: "&c_Uso: /zz deny <zona> <jugador>"
+usage-remove: "&c_Uso: /zz remove <zona> <jugador>"
+
+# Comando de Información
+info-header: "&b--- Información de la Zona: &e{zone} &b---"
+info-owner: "&7Propietario: &f{owner}"
+info-world: "&7Mundo: &f{world}"
+info-coords: "&7Coordenadas: &f({min_x}, {min_y}, {min_z}) a ({max_x}, {max_y}, {max_z})"
+info-flags-header: "&7Flags:"
+info-flag-line: "&7- &e{flag}: &f{value}"
+info-allowed-header: "&7Jugadores Permitidos:"
+info-denied-header: "&7Jugadores Denegados:"
+info-list-empty: "&7(Vacía)"
+
+# Comandos de Ayuda
+help-header: "&b--- Comandos de ZenZones ---"
+help-create: "&e/zz create <nombre> &7- Crea una zona con tu selección de WE."
+help-delete: "&e/zz delete <nombre> &7- Elimina una zona."
+help-list: "&e/zz list &7- Muestra una lista de todas las zonas."
+help-info: "&e/zz info <zona> &7- Muestra información detallada de una zona."
+help-flag: "&e/zz flag <zona> <flag> <allow|deny> &7- Modifica una flag de la zona."
+help-flaglist: "&e/zz flaglist &7- Muestra las flags disponibles."
+help-reload: "&e/zz reload &7- Recarga la configuración del plugin."
+
+# Lista de Flags
+flag-list-header: "&b--- Flags Disponibles ---"
+flag-list-item: "&7- &e{flag}"

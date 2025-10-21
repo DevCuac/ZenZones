@@ -1,0 +1,23 @@
+name: ZenZones
+version: 1.0
+main: com.cuac_xd.zenzones.ZenZones
+author: cuac_xd
+description: "Un plugin completo para crear y gestionar zonas protegidas."
+softdepend: [WorldEdit, Citizens]
+
+commands:
+  zenzones:
+    description: Comando principal de ZenZones.
+    aliases: [zz, zones]
+    usage: "/zz help"
+
+permissions:
+  zenzones.admin:
+    description: "Permite el uso de todos los comandos de ZenZones."
+    default: op
+  zenzones.entry.*:
+    description: "Permite la entrada a todas las zonas."
+    default: op
+  zenzones.bypass.*:
+    description: "Permite ignorar todas las protecciones de las flags (pvp, build, etc)."
+    default: op
