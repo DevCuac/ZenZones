@@ -32,21 +32,16 @@ public class ProtectionListener implements Listener {
 
         ProtectedZone zone = zoneManager.getZoneAt(damaged.getLocation());
         if (zone == null || !zone.getFlag("pvp")) {
-            return; // No estamos en una zona con pvp:deny
+            return;
         }
 
-        // Lógica de compatibilidad con Citizens
         if (plugin.isCitizensHooked()) {
             boolean isDamagerNPC = CitizensAPI.getNPCRegistry().isNPC(damager);
             boolean isDamagedNPC = CitizensAPI.getNPCRegistry().isNPC(damaged);
-
-            // Si un NPC ataca a un jugador, O un jugador ataca a un NPC, se permite el daño.
             if (isDamagerNPC || isDamagedNPC) {
                 return;
             }
         }
-
-        // Si no hay NPCs involucrados, aplica la protección estándar Jugador vs Jugador.
         if (damager instanceof Player && damaged instanceof Player) {
             Player attacker = (Player) damager;
             if (!attacker.hasPermission("zenzones.bypass.pvp")) {
