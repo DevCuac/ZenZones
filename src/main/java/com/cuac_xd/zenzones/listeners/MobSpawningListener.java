@@ -17,7 +17,6 @@ public class MobSpawningListener implements Listener {
 
     @EventHandler
     public void onCreatureSpawn(CreatureSpawnEvent event) {
-        // Solo nos interesan los spawns naturales para no interferir con huevos, comandos, etc.
         if (event.getSpawnReason() != CreatureSpawnEvent.SpawnReason.NATURAL) {
             return;
         }
