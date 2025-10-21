@@ -30,7 +30,7 @@ public class PlayerMoveListener implements Listener {
         ProtectedZone toZone = zoneManager.getZoneAt(event.getTo());
         ProtectedZone fromZone = zoneManager.getZoneAt(event.getFrom());
 
-        if (toZone != null && fromZone == null) { // Entrando a una zona
+        if (toZone != null && fromZone == null) {
             String permission = "zenzones.entry." + toZone.getName();
             if (!player.hasPermission(permission) && !player.hasPermission("zenzones.entry.*")) {
                 event.setTo(event.getFrom());
@@ -38,11 +38,9 @@ public class PlayerMoveListener implements Listener {
                 return;
             }
             if (settingsManager.isWelcomeFarewellEnabled()) {
-                // Lógica para enviar mensaje de bienvenida
             }
-        } else if (toZone == null && fromZone != null) { // Saliendo de una zona
+        } else if (toZone == null && fromZone != null) {
             if (settingsManager.isWelcomeFarewellEnabled()) {
-                // Lógica para enviar mensaje de despedida
             }
         }
     }
